@@ -5,23 +5,30 @@
 	font-style: normal;
 }
 
-#contentdiv {
-	background-color: #eae;
-	width:90%;
-	height:90%;
+body {
+    background-color: #fff5ff;
+    padding:20px;
 	margin:auto;
 }
 
+#contentdiv {
+    height:300px;
+    width:400px;
+    padding:50px;
+    margin:auto;
+}
+
 #keydiv {
-    width:80px;
-    height:80px;
+    width:100px;
+    height:75px;
     margin: auto;
-    background-color: #aee;
-    border-color: #000;
+    background-color: #f4ecc4;
+    border-color: #8a743d;
     text-align: center;
-    font-size: 15pt;
-    border-style: solid;
-    border-width: 2pt;
+    font-size: 40pt;
+    padding-top: 25px;
+    border-style: ridge;
+    border-width: 4pt;
 }
 
 h1 {
@@ -31,4 +38,5 @@ h1 {
 
 html {
     font-family: VulfMonoWeb, monospace;
+    color: color(srgb 0.2128 0.1774 0.0926);
 }
