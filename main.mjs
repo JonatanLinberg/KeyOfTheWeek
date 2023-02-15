@@ -1,4 +1,3 @@
-
 // get week number 1-52 mon-sun
 function getweek(date) {
 	daylen = 86400000
@@ -15,4 +14,9 @@ function getCurrentKey() {
 
 	i = getweek(new Date()) % keys.length
 	return keys[i]
+}
+
+module.exports = {
+	getweek,
+	getCurrentKey
 }

@@ -12,8 +12,8 @@
 	<div id='contentdiv'>
 		<h1>Key of the Week</h1>
 		<div id='keydiv'>
-			<script src="main.js"></script>
 			<script type="text/javascript">
+				import {getweek, getCurrentKey} from 'main.mjs'
 				document.getElementById("keydiv").append(getCurrentKey())
 			</script>
 		</div>
