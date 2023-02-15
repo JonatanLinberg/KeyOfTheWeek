@@ -21,6 +21,6 @@ jobs:
           # File path to update
           path: key.xml
           # Content to update the file
-          content: ${{ steps.get_data.outputs.* }}
+          content: ${{ steps.get_data.outputs.key }}
           # Commit message when update the file
           commit_message: Update API data
