@@ -1,0 +1,21 @@
+on:
+  schedule:
+    - cron: '50 2 * * *'
+    
+jobs:
+  update_api_data:
+    name: Update data for API
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - uses: wow-actions/update-file@v4e86156f87cbf9c09a6995d310df3e48bc4d1057
+        with:
+          # Your GitHub token for authentication.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # File path to update
+          path: key.xml
+          # Content to update the file
+          content: TESTKEY
+          # Commit message when update the file
+          commit_message: Update API data
