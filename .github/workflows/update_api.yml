@@ -10,7 +10,7 @@ jobs:
     permissions:
       actions: write
     steps:
-      - uses: wow-actions/update-file@1.2.0
+      - uses: wow-actions/update-file@v1.2.0
         with:
           # Your GitHub token for authentication.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
