@@ -7,8 +7,7 @@ jobs:
   update_api_data:
     name: Update data for API
     runs-on: ubuntu-latest
-    permissions:
-      actions: write
+    permissions: write-all
     steps:
       - uses: wow-actions/update-file@v1.2.0
         with:
