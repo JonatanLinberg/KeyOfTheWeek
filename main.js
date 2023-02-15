@@ -9,8 +9,13 @@ function getweek(date) {
 	var day = Math.floor((date - year_start) / daylen)
 	return Math.ceil(day / 7)
 }
-const keys = ['F#', 'B', 'Bb', 'Db', 'C', 'Eb', 'F', 'G', 'D', 'Ab', 'E', 'A']
-const keydiv = document.getElementById("keydiv");
 
-i = getweek(new Date()) % keys.length
-keydiv.append(keys[i])
+function getCurrentKey() {
+	const keys = ['F#', 'B', 'Bb', 'Db', 'C', 'Eb', 'F', 'G', 'D', 'Ab', 'E', 'A']
+	const keydiv = document.getElementById("keydiv");
+
+	i = getweek(new Date()) % keys.length
+	return keys[i]
+}
+
+keydiv.append(getCurrentKey())
