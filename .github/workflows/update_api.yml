@@ -8,7 +8,11 @@ jobs:
     name: Update data for API
     runs-on: ubuntu-latest
     permissions: write-all
+    env:
+        key: error
     steps:
+      - uses: ./.github/actions/get_api_data.yml
+        id: get_data
       - uses: wow-actions/update-file@v1.2.0
         with:
           # Your GitHub token for authentication.
@@ -16,6 +20,6 @@ jobs:
           # File path to update
           path: key.xml
           # Content to update the file
-          content: TESTKEY
+          content: ${{ steps.get_data.outputs.* }}
           # Commit message when update the file
           commit_message: Update API data
